@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Система дипломного проектирования</title>
+    <title>Управление студентами</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,8 +12,8 @@
             <nav class="nav">
                 <a href="index.html"><h1 class="logo" style="color: white;">ДипПроект</h1></a>
                 <ul class="nav-list">
-                    <li><a href="index.html" class="active">Главная</a></li>
-                    <li><a href="manage.html">Управление</a></li>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="manage.html"  class="active">Управление</a></li>
                     <li><a href="#" id="authLink">Войти/Зарегистрироваться</a></li>
                 </ul>
             </nav>
@@ -22,38 +22,29 @@
 
     <main class="main">
         <div class="container">
-            <section class="news-section">
-                <h2 class="section-title">Последние новости</h2>
-                <div class="news-grid">
-                    <article class="news-card">
-                        <h3>Обновление регламента защиты</h3>
-                        <time datetime="2024-03-15">15 марта 2024</time>
-                        <p>Утверждены новые требования к оформлению презентаций для защиты дипломных работ.</p>
-                    </article>
-                    <article class="news-card">
-                        <h3>График консультаций</h3>
-                        <time datetime="2024-03-14">14 марта 2024</time>
-                        <p>Опубликовано расписание консультаций научных руководителей на апрель.</p>
-                    </article>
-                    <article class="news-card">
-                        <h3>Технические требования</h3>
-                        <time datetime="2024-03-13">13 марта 2024</time>
-                        <p>Обновлены технические требования к электронным версиям дипломных работ.</p>
-                    </article>
-                    <article class="news-card">
-                        <h3>Семинар для руководителей</h3>
-                        <time datetime="2024-03-12">12 марта 2024</time>
-                        <p>Состоится методический семинар по вопросам антиплагиата.</p>
-                    </article>
-                    <article class="news-card">
-                        <h3>Онлайн-защиты</h3>
-                        <time datetime="2024-03-10">10 марта 2024</time>
-                        <p>Уточнён порядок организации онлайн-защит дипломных работ.</p>
-                    </article>
-                </div>
-            </section>
+            <div class="manage-header">
+                <h2>Управление студентами</h2>
+                <button id="addStudentBtn" class="add-btn">Добавить студента</button>
+            </div>
+            
+            <div class="students-list" id="studentsList">
+            </div>
         </div>
     </main>
+
+    <div id="addStudentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Добавить студента</h2>
+            <form id="addStudentForm">
+                <input type="text" id="studentName" placeholder="ФИО студента" required>
+                <input type="text" id="studentGroup" placeholder="Группа" required>
+                <input type="text" id="thesisTitle" placeholder="Название дипломной работы" required>
+                <input type="text" id="supervisorName" placeholder="ФИО руководителя" required>
+                <button type="submit">Добавить</button>
+            </form>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -90,5 +81,6 @@
         </div>
     </div>
     <script src="js.js"></script>
+    <script src="manage.js"></script>
 </body>
 </html>
