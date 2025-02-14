@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система дипломного проектирования</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html"><h1 class="logo" style="color: white;">ДипПроект</h1></a>
+                <ul class="nav-list">
+                    <li><a href="#" class="active">Главная</a></li>
+                    <li><a href="#">Управление</a></li>
+                    <li><a href="#" id="authLink">Войти/Зарегистрироваться</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="news-section">
+                <h2 class="section-title">Последние новости</h2>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <h3>Обновление регламента защиты</h3>
+                        <time datetime="2024-03-15">15 марта 2024</time>
+                        <p>Утверждены новые требования к оформлению презентаций для защиты дипломных работ.</p>
+                    </article>
+                    <article class="news-card">
+                        <h3>График консультаций</h3>
+                        <time datetime="2024-03-14">14 марта 2024</time>
+                        <p>Опубликовано расписание консультаций научных руководителей на апрель.</p>
+                    </article>
+                    <article class="news-card">
+                        <h3>Технические требования</h3>
+                        <time datetime="2024-03-13">13 марта 2024</time>
+                        <p>Обновлены технические требования к электронным версиям дипломных работ.</p>
+                    </article>
+                    <article class="news-card">
+                        <h3>Семинар для руководителей</h3>
+                        <time datetime="2024-03-12">12 марта 2024</time>
+                        <p>Состоится методический семинар по вопросам антиплагиата.</p>
+                    </article>
+                    <article class="news-card">
+                        <h3>Онлайн-защиты</h3>
+                        <time datetime="2024-03-10">10 марта 2024</time>
+                        <p>Уточнён порядок организации онлайн-защит дипломных работ.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2024 Система дипломного проектирования</p>
+                <p>Техническая поддержка: support@dipproject.ru</p>
+            </div>
+        </div>
+    </footer>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход в систему</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Ваш email" required>
+                <input type="password" id="loginPassword" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+            <p>Нет аккаунта? <a href="#" id="showRegister">Зарегистрироваться</a></p>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Регистрация</h2>
+            <form id="registerForm">
+                <input type="text" id="registerName" placeholder="Ваше имя" required>
+                <input type="email" id="registerEmail" placeholder="Ваш email" required>
+                <input type="password" id="registerPassword" placeholder="Придумайте пароль" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+            <p>Уже есть аккаунт? <a href="#" id="showLogin">Войти</a></p>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
